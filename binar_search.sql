@@ -6,9 +6,9 @@ declare
  high number;
  mid number;
  guess number;
- item number:=3; -- число которое ищем
+ item number:=3; -- С‡РёСЃР»Рѕ РєРѕС‚РѕСЂРѕРµ РёС‰РµРј
 begin
--- задаём элементы массива
+-- Р·Р°РґР°С‘Рј СЌР»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР°
     arr(1):= 1;
     arr(2):= 3;
     arr(3):= 5;
@@ -22,25 +22,25 @@ begin
    
     WHILE (low <= high)
         LOOP
-        mid:=floor((low+high)/2); -- округляем без остатка в меньшую сторону
+        mid:=floor((low+high)/2); -- РѕРєСЂСѓРіР»СЏРµРј Р±РµР· РѕСЃС‚Р°С‚РєР° РІ РјРµРЅСЊС€СѓСЋ СЃС‚РѕСЂРѕРЅСѓ
         --DBMS_OUTPUT.put_line('mid='||mid);  
         guess:=arr(mid);
         --DBMS_OUTPUT.put_line('guess='||guess); 
         
         IF guess=item THEN   
-        exit; -- ответ в mid           
+        exit; -- РѕС‚РІРµС‚ РІ mid           
         END IF;
         
-        IF  guess > item THEN -- много, уменьшаем верхнюю границу
+        IF  guess > item THEN -- РјРЅРѕРіРѕ, СѓРјРµРЅСЊС€Р°РµРј РІРµСЂС…РЅСЋСЋ РіСЂР°РЅРёС†Сѓ
         high:= mid - 1;
         --DBMS_OUTPUT.put_line('high='||high); 
         ELSE
-        low:=mid+1; -- мало, увеличиваем нижнюю границу
+        low:=mid+1; -- РјР°Р»Рѕ, СѓРІРµР»РёС‡РёРІР°РµРј РЅРёР¶РЅСЋСЋ РіСЂР°РЅРёС†Сѓ
         --DBMS_OUTPUT.put_line('low='||low); 
         END IF;
         
     END LOOP;
     
-    DBMS_OUTPUT.put_line('Искомое число находится во '||mid||'й позиции в заданном массиве.'); 
+    DBMS_OUTPUT.put_line('РСЃРєРѕРјРѕРµ С‡РёСЃР»Рѕ РЅР°С…РѕРґРёС‚СЃСЏ РІРѕ '||mid||'Р№ РїРѕР·РёС†РёРё РІ Р·Р°РґР°РЅРЅРѕРј РјР°СЃСЃРёРІРµ.'); 
  
 end;

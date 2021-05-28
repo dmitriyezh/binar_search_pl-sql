@@ -32,7 +32,7 @@ begin
         END IF;
         
         IF  guess > item THEN -- много, уменьшаем верхнюю границу
-        high:= mid - 1;
+        high:=mid-1;
         --DBMS_OUTPUT.put_line('high='||high); 
         ELSE
         low:=mid+1; -- мало, увеличиваем нижнюю границу
